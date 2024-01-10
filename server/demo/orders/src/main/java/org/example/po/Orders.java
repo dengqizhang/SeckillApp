@@ -1,11 +1,14 @@
 package org.example.po;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
 import java.sql.Timestamp;
+import java.util.Date;
 
 
 @Data
@@ -13,12 +16,11 @@ import java.sql.Timestamp;
 @RequiredArgsConstructor
 @TableName("`orders`")
 public class Orders {
+    @TableId(type = IdType.AUTO)
     private int orderId; //订单表id
     private int userId; //用户id
-    private int productId; //商品id
-    private int quantity; //当前商品在订单内的数量
     private String status; //状态
-    private String createTime;  //生成订单时间
+    private Date createTime;  //生成订单时间
 
 
 }
