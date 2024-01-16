@@ -1,6 +1,8 @@
 package org.example.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import org.example.client.ProductClient;
+import org.example.dto.ProductDto;
 import org.example.mapper.OrdersItemMapper;
 import org.example.mapper.OrdersMapper;
 import org.example.po.OrderItemsPo;
@@ -22,6 +24,16 @@ public class OrdersController {
 
     @Autowired
     private OrdersItemMapper ordersItemMapper;
+
+    @Autowired
+    private ProductClient productClient;
+
+
+    @GetMapping("/getProductList")
+    public List<ProductDto> getProductList(){
+
+        return productClient.getProductList();
+    }
     /**
      * 查询所有订单
      * @return List<Orders>

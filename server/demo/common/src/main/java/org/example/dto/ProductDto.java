@@ -1,17 +1,19 @@
-package org.example.po;
+package org.example.dto;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
+import lombok.experimental.Accessors;
 
 import java.math.BigDecimal;
 
 @Data
 @AllArgsConstructor
 @RequiredArgsConstructor
-@TableName("`product`")
-public class ProductPo {
+@Accessors(chain = true)
+@TableName("product")
+public class ProductDto {
 
     private int productID; //商品表id
     private String name; //商品姓名
