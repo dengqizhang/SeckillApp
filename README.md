@@ -10,13 +10,23 @@
 
 
 版本信息：
+
 springboot 2.6.13
+
 springCloudAlibaba 2021.0.5.0
+
 Sentinel 1.8.6
+
 Nacos 2.2.0
+
 RocketMQ 4.9.4
+
 Seate 1.6.1
+
 jdk 17
+
 mybatis-plus 3.5.3.1
+
 mysql
+
 lombok
